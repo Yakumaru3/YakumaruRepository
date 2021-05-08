@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Top page</title>
+<!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+<style>
+div.loginName{float:right;}
+/*.box1{
+	background-color: bisque;
+	height:300px;
+	}
+.box2{
+	background-color: white;
+	height:300px;
+	}
+.box3{
+	background-color: yellow;
+	height:300px;
+	}
+*/
+.box{
+	width:200px;
+	height:900px;
+	float:left;
+	;
+	}
+.boxa{
+	width:200px;
+	height:300px;
+	color:white;
+	display:flex;
+	}
+.boxb{
+	width:200px;
+	height:300px;
+	color:white;
+	display:flex;
+	}
+.boxc{
+	width:200px;
+	height:300px;
+	color:white;
+	display:flex;
+	}
+.boxd{
+	width:200px;
+	height:300px;
+	color:white;
+	display:flex;
+	}
+</style>
+</head>
+
+<div class="box d-none d-md-block">
+<div class="boxa h-25">
+<div class="box1 shadow col py-3 bg-secondary">box1</div>
+</div>
+<div class="boxb h-25">
+
+<div class="box2 shadow col py-3 bg-primary">box2</div>
+
+</div>
+<div class="box3 shadow col py-3 bg-secondary">box3</div>
+</div>
+
+</div>
+
+<div class="container">
+<div class="box2">
+<div class="loginName">「ゲスト」さんがログインしています
+<form action="Home" method="post">
+  <input type="hidden" name="loginName" value="<%=loginName%>">
+  <button class="keijiban" type="submit" value="keijiban">掲示板</button>
+<form action="Home" method="post"></div><br>
+<div class ="jambotron">
+	<h1>ようこそ</h1>
+	<p>こちらでは、日々撮影した写真を共有することができます</p>
+	<p>主な機能としては掲示板になります
+	<p>管理人は写真に関して初心者なので、撮影した写真をあげたり</p>
+	<p>皆様の写真を見て、また語り合い勉強していきたいと考えたてられたサイトです</p>
+	<p>撮影された写真を共有して、楽しく語り合いませんか！？</p>
+</div>
+
+
+<!-- embed 埋め込んだページを自動で縮小　スマホで見れる -->
+
+	<div class="embed-responsive embed-responsive-16by9">
+  <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/zpOULjyy-n8?rel=0" allowfullscreen width="530" height="300"></iframe>
+</div>
+</div>
+
+
+<!-- 自動で素ロールしてくれる -->
+<nav id="navbar-example2" class="navbar navbar-light bg-light">
+  <a class="navbar-brand" href="#">Navbar</a>
+  <ul class="nav nav-pills">
+    <li class="nav-item">
+      <a class="nav-link" href="#fat">@fat</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#mdo">@mdo</a>
+    </li>
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Dropdown</a>
+      <div class="dropdown-menu">
+        <a class="dropdown-item" href="#one">one</a>
+        <a class="dropdown-item" href="#two">two</a>
+        <div role="separator" class="dropdown-divider"></div>
+        <a class="dropdown-item" href="#three">three</a>
+      </div>
+    </li>
+  </ul>
+</nav>
+<div data-spy="scroll" data-target="#navbar-example2" data-offset="0">
+  <h4 id="fat">@fat</h4>
+  <p>...</p>
+  <h4 id="mdo">@mdo</h4>
+  <p>...</p>
+  <h4 id="one">one</h4>
+  <p>...</p>
+  <h4 id="two">two</h4>
+  <p>...</p>
+  <h4 id="three">three</h4>
+  <p>...</p>
+</div>
+
+<!--  トースト -->
+<div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+  <div class="toast-header">
+    <svg class="bd-placeholder-img rounded mr-2" width="20" height="20" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img"><rect width="100%" height="100%" fill="#007aff"/></svg>
+    <strong class="mr-auto">Bootstrap</strong>
+    <small>11 mins ago</small>
+    <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="toast-body">
+    Hello, world! This is a toast message.
+  </div>
+</div>
+
+
+
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="#">Home</a></li>
+    <li class="breadcrumb-item"><a href="http://localhost:8080/ECSite/Picture1.jsp?action=picture&loginName=<%=loginName%>"></a></li>
+    <li class="breadcrumb-item active" aria-current="page">Data</li>
+  </ol>
+</nav>
+<nav class="nav">
+	<a class="btn btn-primary" href="#" role="button">ホーム</a>
+  	<a class="nav-link" href="http://localhost:8080/ECSite/Picture1.jsp?action=picture&loginName=<%=loginName%>">ギャラリー</a>
+  	<a class="nav-link" href="#">ログイン</a>
+  	<a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">メインページ</a>
+</nav>
+
+
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+  Launch demo modal
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+</div>
+<button type="button" class="btn btn-lg btn-danger" data-toggle="popover" title="こちらの写真を投稿してよろしいですか" data-content="And here's some amazing content. It's very engaging. Right?">Click to toggle popover</button>
+
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+<script>
+$(function () {
+	  $('[data-toggle="popover"]').popover()
+	})
+</script>
+</body>
+</html>
